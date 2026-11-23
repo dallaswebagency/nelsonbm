@@ -100,57 +100,6 @@ nav.main a:hover{color:var(--indigo)}
 section{padding:96px 0}
 h2{font-size:clamp(2.1rem,4vw,3.3rem);margin:0 0 20px}
 
-/* experience + directory */
-.exp .wrap{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:start}
-.spaces{margin:28px 0 30px;padding:0;list-style:none}
-.spaces li{font-stretch:70%;font-variation-settings:"wdth" 70;font-weight:800;font-size:clamp(2rem,4vw,3rem);line-height:1.05;color:var(--indigo)}
-.spaces li:nth-child(2){padding-left:1.2em}
-.spaces li:nth-child(3){padding-left:2.4em}
-@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .spaces li{color:#B8AFFF}}
-.exp p{max-width:52ch;color:var(--muted)}
-.board{background:#1A1640;color:#F3F1FF;padding:26px 26px 30px;border:10px solid #3A3650;box-shadow:inset 0 0 0 1px #000;position:relative}
-.board .bhead{display:flex;justify-content:space-between;align-items:center;border-bottom:2px solid #4D4877;padding-bottom:14px;margin-bottom:6px}
-.board .bhead h3{margin:0;font-size:1.25rem;font-weight:700}
-.board .bhead img{height:34px;background:#fff;padding:3px 6px;border-radius:2px}
-.board ul{list-style:none;margin:0;padding:0;background:repeating-linear-gradient(#1A1640 0 47px,#2A2556 47px 49px)}
-.board li{height:49px;display:flex;align-items:center;justify-content:space-between;font-family:"Archivo",sans-serif;font-stretch:88%;font-variation-settings:"wdth" 88;font-size:1.2rem;letter-spacing:.04em}
-.board li i{font-style:normal;color:var(--yellow);font-size:.95rem;letter-spacing:.06em}
-.exp figure{margin:0 0 26px}
-.exp figure img{width:100%;aspect-ratio:16/10;object-fit:cover;filter:saturate(1.05)}
-
-/* services */
-.svc{background:var(--surface);border-block:1px solid var(--line)}
-.svc .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:64px;align-items:start}
-.svc-intro{max-width:46ch;color:var(--muted);margin-bottom:36px}
-.svc ol{list-style:none;margin:0;padding:0;border-top:2px solid var(--ink)}
-.svc li{border-bottom:1px solid var(--line)}
-.svc button{all:unset;box-sizing:border-box;width:100%;display:flex;align-items:center;justify-content:space-between;gap:16px;padding:20px 4px;cursor:pointer;font-stretch:80%;font-variation-settings:"wdth" 80;font-weight:750;font-size:clamp(1.5rem,2.6vw,2.15rem);line-height:1.1}
-.svc button:focus-visible{outline:3px solid var(--indigo);outline-offset:2px}
-.svc button .tick{width:34px;height:34px;flex:none;background:var(--mist);clip-path:polygon(6px 0,100% 0,calc(100% - 6px) 100%,0 100%);transition:background .2s}
-.svc button[aria-pressed="true"]{color:var(--indigo)}
-.svc button[aria-pressed="true"] .tick{background:var(--yellow)}
-@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .svc button[aria-pressed="true"]{color:var(--yellow)}}
-.svc .thumb{display:none}
-.panel{position:sticky;top:120px}
-.panel .frame{position:relative;aspect-ratio:4/3;overflow:hidden;background:var(--mist)}
-.panel img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity .35s}
-.panel img.on{opacity:1}
-.panel .cap{display:flex;justify-content:space-between;gap:16px;background:var(--indigo);color:#fff;padding:16px 20px;font-weight:700}
-.panel .cap a{color:var(--yellow)}
-
-/* schedule */
-.sched .head{display:flex;justify-content:space-between;align-items:end;gap:30px;flex-wrap:wrap;margin-bottom:34px}
-.sched .head p{max-width:46ch;color:var(--muted);margin:0}
-.week{width:100%;border-collapse:collapse;background:var(--surface);border:2px solid var(--ink)}
-.week th,.week td{padding:0;text-align:center;border:1px solid var(--line)}
-.week thead th{font-weight:700;font-size:.95rem;padding:12px 6px;color:var(--muted)}
-.week tbody th{text-align:left;padding:18px 22px;font-weight:750;font-size:1.15rem;white-space:nowrap;width:30%}
-.week td{height:64px;position:relative}
-.week td.on::before{content:"";position:absolute;inset:12px;background:var(--indigo);clip-path:polygon(8px 0,100% 0,calc(100% - 8px) 100%,0 100%)}
-.week tbody tr:first-child td.on::before{background:var(--yellow)}
-@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .week td.on::before{background:#7C6EF0}}
-.week-scroll{overflow-x:auto}
-
 /* three commitments */
 .commit{padding-top:0}
 .commit .tiles{display:grid;grid-template-columns:1.25fr 1fr 1fr;gap:0}
@@ -165,15 +114,6 @@ h2{font-size:clamp(2.1rem,4vw,3.3rem);margin:0 0 20px}
 .ct.p{background:var(--yellow);color:var(--indigo-deep)}
 .ct.g img{width:120px;margin:-8px 0 12px -10px;mix-blend-mode:multiply}
 
-/* skyline */
-.sky{position:relative;padding:0;min-height:460px;display:grid;color:#fff;overflow:hidden}
-.sky img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
-.sky::before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(31,24,80,.94) 0%,rgba(31,24,80,.75) 42%,rgba(31,24,80,.05) 80%);z-index:1}
-.sky .wrap{position:relative;z-index:2;align-self:center;padding:80px 0}
-.sky h2{max-width:14ch}
-.sky p{max-width:40ch;color:#DDDAF2;font-size:1.15rem}
-.sky .stamp{display:inline-block;margin-top:12px;background:var(--yellow);color:var(--indigo-deep);font-style:italic;font-weight:850;font-stretch:80%;font-variation-settings:"wdth" 80;padding:8px 22px;clip-path:polygon(10px 0,100% 0,calc(100% - 10px) 100%,0 100%)}
-
 /* contact */
 .contact .wrap{display:grid;grid-template-columns:1.2fr .8fr;gap:0;border:2px solid var(--ink);background:var(--surface)}
 .contact .c1{padding:48px}
@@ -187,34 +127,16 @@ h2{font-size:clamp(2.1rem,4vw,3.3rem);margin:0 0 20px}
 .contact .c2 p{color:#DDDAF2;margin:0}
 .contact .c2 h3{font-stretch:80%;font-variation-settings:"wdth" 80;font-size:2.2rem;margin:0 0 12px;line-height:1}
 
-/* footer */
-footer{background:var(--mist);color:#1F1A45;margin-top:0;padding:56px 0 30px}
-@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) footer{color:var(--ink)}}
-footer .top{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:40px;padding-bottom:36px;border-bottom:1px solid rgba(31,26,69,.25)}
-footer .logo-plate{background:#fff;display:inline-block;padding:10px 14px;margin-bottom:16px}
-footer .logo-plate img{height:70px;width:auto}
-footer h4{margin:0 0 12px;font-size:1rem}
-footer ul{list-style:none;margin:0;padding:0;display:grid;gap:6px}
-footer a{text-decoration:none}
-footer a:hover{text-decoration:underline}
-footer .bottom{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;padding-top:22px;font-size:.92rem}
-footer .bottom a{font-weight:700;text-decoration:underline}
-
 .mobar{display:none}
 
 @media (max-width:980px){
-  .hero .wrap,.exp .wrap,.svc .wrap,.contact .wrap{grid-template-columns:1fr}
+  .hero .wrap,.contact .wrap{grid-template-columns:1fr}
   .checker{justify-self:center;max-width:min(440px,86%);margin:10px auto 20px;transform:rotate(-5deg)}
   .creds ul{grid-template-columns:1fr 1fr}
   .creds li:nth-child(3){border-left:0}
   .creds li:nth-child(n+3){border-top:2px solid var(--ink)}
   .commit .tiles{grid-template-columns:1fr}
   .ct{min-height:0}
-  .panel{display:none}
-  .svc .thumb{display:block;width:100%;aspect-ratio:16/9;object-fit:cover;margin:0 0 18px}
-  .svc li .thumb{display:none}
-  .svc li.open .thumb{display:block}
-  footer .top{grid-template-columns:1fr 1fr}
 }
 @media (max-width:760px){
   nav.main{display:none;position:absolute;left:0;right:0;top:100%;background:#fff;border-bottom:1px solid #E1E6EC}
@@ -232,12 +154,167 @@ footer .bottom a{font-weight:700;text-decoration:underline}
   .contact .c1,.contact .c2{padding:30px 24px}
   .contact dl{grid-template-columns:1fr;gap:2px}
   .contact dd{margin-bottom:10px}
-  footer .top{grid-template-columns:1fr}
   .ribbon{left:-8px;font-size:.95rem}
   body{padding-bottom:64px}
   .mobar{display:grid;grid-template-columns:1fr 1fr;position:fixed;left:0;right:0;bottom:0;z-index:40;padding-bottom:env(safe-area-inset-bottom,0px);background:var(--indigo-deep)}
   .mobar a{padding:16px;text-align:center;font-weight:750;text-decoration:none;color:#fff}
   .mobar a:first-child{background:var(--yellow);color:var(--indigo-deep)}
+}
+
+/* reveal motion */
+.rv{opacity:0;transform:translateY(26px);transition:opacity .8s cubic-bezier(.2,.7,.2,1),transform .8s cubic-bezier(.2,.7,.2,1)}
+.rv.in{opacity:1;transform:none}
+.rv.d1{transition-delay:.08s}.rv.d2{transition-delay:.16s}.rv.d3{transition-delay:.24s}.rv.d4{transition-delay:.32s}.rv.d5{transition-delay:.4s}
+@media (prefers-reduced-motion:reduce){.rv{opacity:1;transform:none}}
+.star{fill:currentColor}
+
+/* experience */
+.exp{position:relative;overflow:hidden}
+.exp::before{content:"";position:absolute;right:-120px;top:60px;width:520px;height:520px;background:conic-gradient(var(--indigo) 0 25%,transparent 0 50%,var(--indigo) 0 75%,transparent 0);background-size:130px 130px;opacity:.06;transform:rotate(-8deg);pointer-events:none}
+.exp-grid{display:grid;grid-template-columns:.95fr 1.05fr;gap:72px;align-items:center}
+.exp-photo{position:relative;margin:0 30px 30px 0}
+.exp-photo::before{content:"";position:absolute;inset:30px -30px -30px 30px;background:var(--indigo);clip-path:polygon(0 0,50% 0,50% 50%,100% 50%,100% 100%,50% 100%,50% 50%,0 50%)}
+.exp-photo::after{content:"";position:absolute;inset:30px -30px -30px 30px;background:var(--yellow);clip-path:polygon(50% 0,100% 0,100% 50%,50% 50%);opacity:.9}
+.exp-photo img{position:relative;z-index:1;width:100%;aspect-ratio:4/5;object-fit:cover}
+.years{position:absolute;z-index:2;left:-28px;bottom:48px;background:var(--surface);color:var(--ink);padding:20px 24px 18px;display:flex;align-items:center;gap:16px;box-shadow:0 18px 40px rgba(20,15,60,.25)}
+.years svg{width:78px;height:78px;transform:rotate(-90deg)}
+.years circle{fill:none;stroke-width:7}
+.years .trk{stroke:var(--mist)}
+.years .bar{stroke:var(--indigo);stroke-dasharray:214;stroke-dashoffset:214;transition:stroke-dashoffset 1.8s cubic-bezier(.2,.7,.2,1)}
+.years.in .bar{stroke-dashoffset:24}
+.years b{display:block;font-stretch:75%;font-variation-settings:"wdth" 75;font-weight:850;font-size:2.6rem;line-height:1;color:var(--indigo)}
+.years b span{display:inline;font-size:inherit;color:inherit;max-width:none}
+.years div>span{font-size:.92rem;color:var(--muted);line-height:1.25;display:block;max-width:12ch}
+.ring{position:relative;display:grid;place-items:center}
+.ring .star{position:absolute;width:24px;height:24px;color:var(--yellow);filter:drop-shadow(0 0 1px var(--indigo))}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .years b,:root:not([data-theme="light"]) .years .bar{color:var(--yellow);stroke:var(--yellow)}}
+.exp h2{margin-bottom:12px}
+.exp .lede{font-size:1.15rem;color:var(--muted);max-width:46ch;margin:0 0 30px}
+.spaces{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-bottom:40px}
+.space{background:var(--surface);border:1.5px solid var(--line);padding:22px 18px 18px;position:relative;overflow:hidden;transition:border-color .3s,transform .3s}
+.space:hover{border-color:var(--indigo);transform:translateY(-4px)}
+.space::after{content:"";position:absolute;left:0;bottom:0;height:4px;width:0;background:var(--yellow);transition:width .6s .3s}
+.space.in::after{width:100%}
+.space svg{width:46px;height:46px;stroke:var(--indigo);fill:none;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round;margin-bottom:14px}
+.space svg *{stroke-dasharray:120;stroke-dashoffset:120;transition:stroke-dashoffset 1.4s .2s ease}
+.space.in svg *{stroke-dashoffset:0}
+.space b{font-stretch:80%;font-variation-settings:"wdth" 80;font-size:1.35rem;font-weight:800;display:block;line-height:1.1}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .space svg{stroke:#B8AFFF}}
+.clients h3{font-size:1.05rem;margin:0 0 14px;display:flex;align-items:center;gap:10px}
+.clients h3 .star{width:16px;height:16px;color:var(--indigo)}
+.clients ul{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.clients li{display:flex;align-items:center;gap:12px;padding:12px 14px;background:var(--indigo);color:#fff;font-weight:600;font-size:.98rem;line-height:1.2;clip-path:polygon(6px 0,100% 0,calc(100% - 6px) 100%,0 100%)}
+.clients li svg{flex:none;width:26px;height:26px;stroke:var(--yellow);fill:none;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+.clients li:nth-child(even){background:var(--indigo-deep)}
+
+/* services: expanding gallery */
+.svc{background:var(--indigo-deep);color:#fff;position:relative;overflow:hidden}
+.svc-top{display:flex;justify-content:space-between;align-items:end;gap:30px;flex-wrap:wrap;margin-bottom:40px}
+.svc-top p{max-width:40ch;color:#CFCBEB;margin:0 0 6px}
+.gallery{display:flex;gap:10px;height:540px}
+.pane{position:relative;flex:1;min-width:0;overflow:hidden;cursor:pointer;transition:flex 0.7s cubic-bezier(.2,.7,.2,1);border:0;padding:0;background:#000;color:#fff;font:inherit;text-align:left}
+.pane.on{flex:5.2}
+.pane img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transform:scale(1.08);transition:transform 1.2s cubic-bezier(.2,.7,.2,1),filter .6s;filter:saturate(.6) brightness(.7)}
+.pane.on img{transform:scale(1);filter:none}
+.pane::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(31,24,80,0) 40%,rgba(31,24,80,.92));z-index:1}
+.pane .vt{position:absolute;z-index:2;left:50%;bottom:26px;transform:translateX(-50%) rotate(180deg);writing-mode:vertical-rl;white-space:nowrap;font-weight:750;font-size:1.05rem;transition:opacity .3s}
+.pane.on .vt{opacity:0}
+.pane .info{position:absolute;z-index:2;left:30px;right:30px;bottom:28px;opacity:0;transform:translateY(18px);transition:opacity .5s .25s,transform .5s .25s}
+.pane.on .info{opacity:1;transform:none}
+.pane .info h3{font-stretch:78%;font-variation-settings:"wdth" 78;font-weight:850;font-size:clamp(1.9rem,3vw,2.8rem);line-height:1;margin:0 0 14px}
+.pane .info span{display:inline-block;background:var(--yellow);color:var(--indigo-deep);font-weight:750;padding:8px 18px;clip-path:polygon(7px 0,100% 0,calc(100% - 7px) 100%,0 100%)}
+.pane:focus-visible{outline:3px solid var(--yellow);outline-offset:3px}
+.pane .tag{position:absolute;z-index:2;top:20px;left:20px;width:30px;height:30px;color:var(--yellow);opacity:0;transition:opacity .4s .3s}
+.pane.on .tag{opacity:1}
+
+/* schedule */
+.sched-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:64px;align-items:center}
+.sched p.lede{color:var(--muted);max-width:42ch;margin:0 0 28px}
+.freq{display:flex;flex-direction:column;gap:10px;max-width:400px}
+.freq button{all:unset;box-sizing:border-box;cursor:pointer;display:flex;justify-content:space-between;align-items:center;padding:16px 22px;background:var(--surface);border:1.5px solid var(--line);font-weight:750;font-size:1.1rem;transition:background .3s,color .3s,border-color .3s,padding .3s}
+.freq button:hover{border-color:var(--indigo)}
+.freq button[aria-pressed="true"]{background:var(--indigo);color:#fff;border-color:var(--indigo);padding-left:30px}
+.freq button .n{font-stretch:75%;font-variation-settings:"wdth" 75;font-weight:850;font-size:1.4rem;color:var(--indigo)}
+.freq button[aria-pressed="true"] .n{color:var(--yellow)}
+.freq button:focus-visible{outline:3px solid var(--yellow);outline-offset:3px}
+.board{position:relative;background:var(--indigo);padding:34px;overflow:hidden;box-shadow:22px 22px 0 var(--mist)}
+.board::before{content:"";position:absolute;inset:0;background:linear-gradient(135deg,rgba(255,255,255,.08),transparent 50%)}
+.board .bh{display:flex;justify-content:space-between;align-items:end;color:#fff;margin-bottom:24px;position:relative}
+.board .bh b{font-stretch:72%;font-variation-settings:"wdth" 72;font-weight:850;font-size:clamp(3.4rem,6vw,5rem);line-height:.85}
+.board .bh span{color:#CFCBEB;text-align:right;font-size:.95rem;max-width:18ch}
+.days{display:grid;grid-template-columns:repeat(5,1fr);gap:10px;position:relative}
+.day{position:relative;height:200px;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.14);overflow:hidden}
+.day i{position:absolute;inset:auto 0 0 0;height:0;background:var(--yellow);transition:height .6s cubic-bezier(.2,.7,.2,1)}
+.day.on i{height:100%}
+.day:nth-child(2) i{transition-delay:.06s}.day:nth-child(3) i{transition-delay:.12s}.day:nth-child(4) i{transition-delay:.18s}.day:nth-child(5) i{transition-delay:.24s}
+.day em{position:absolute;z-index:1;left:0;right:0;bottom:14px;text-align:center;font-style:normal;font-weight:750;color:#fff;transition:color .4s}
+.day.on em{color:var(--indigo-deep)}
+.day svg{position:absolute;z-index:1;top:16px;left:50%;width:26px;height:26px;margin-left:-13px;color:var(--indigo);opacity:0;transform:scale(.3) rotate(-45deg);transition:opacity .4s .4s,transform .5s .4s}
+.day.on svg{opacity:1;transform:none}
+.squeegee{position:absolute;z-index:3;top:-10px;bottom:-10px;width:14px;left:-30px;background:linear-gradient(90deg,transparent,rgba(255,255,255,.85),transparent);opacity:0}
+.board.sweep .squeegee{animation:sweep .8s ease-in-out}
+@keyframes sweep{0%{left:-30px;opacity:1}100%{left:calc(100% + 30px);opacity:1}}
+
+/* skyline */
+.sky{position:relative;padding:0;height:min(640px,82vh);min-height:480px;overflow:hidden;color:#fff;background:var(--indigo-deep)}
+.sky>img{position:absolute;inset:0;width:100%;height:118%;object-fit:cover;will-change:transform}
+.sky::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(31,24,80,.15) 0%,rgba(31,24,80,0) 35%,rgba(31,24,80,.92) 100%),linear-gradient(90deg,rgba(31,24,80,.65),transparent 60%)}
+.sky .wrap{position:relative;z-index:2;height:100%;display:flex;flex-direction:column;justify-content:flex-end;padding-bottom:56px}
+.sky .word{font-stretch:62%;font-variation-settings:"wdth" 62;font-weight:900;font-size:clamp(4.6rem,15vw,13rem);line-height:.8;letter-spacing:-.02em;color:transparent;-webkit-text-stroke:2px rgba(255,255,255,.9);margin:0}
+.sky .word span{display:block;color:#fff;-webkit-text-stroke:0;font-size:clamp(1.3rem,2.4vw,2rem);font-stretch:85%;font-variation-settings:"wdth" 85;font-weight:700;letter-spacing:0;line-height:1.2;margin-top:16px}
+.sky p{max-width:44ch;color:#E2E0F5;font-size:1.1rem;margin:14px 0 0}
+.badge{position:absolute;z-index:3;right:max(20px,calc((100% - 1200px)/2));top:54px;width:170px;height:170px}
+.badge .spin{width:100%;height:100%;animation:spin 18s linear infinite}
+.badge text{fill:#fff;font-size:10.6px;font-weight:800;letter-spacing:1.4px}
+.badge .core{position:absolute;inset:38px;border-radius:50%;background:var(--yellow);display:grid;place-items:center;color:var(--indigo-deep)}
+.badge .core svg{width:48px;height:48px;animation:twinkle 3.2s ease-in-out infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+
+/* footer */
+footer{background:var(--indigo-deep);color:#D9D6F0;padding:80px 0 0;margin-top:0;position:relative;overflow:hidden}
+footer .top{display:grid;grid-template-columns:1.3fr 1fr 1fr 1.1fr;gap:44px;position:relative;z-index:1}
+footer .logo-plate{background:#fff;display:inline-block;padding:12px 16px;transform:rotate(-4deg);box-shadow:8px 8px 0 var(--yellow);margin-bottom:26px}
+footer .logo-plate img{height:74px;width:auto}
+footer p{margin:0;max-width:34ch}
+footer h4{margin:0 0 16px;color:#fff;font-size:1.05rem;display:flex;align-items:center;gap:8px}
+footer h4 .star{width:12px;height:12px;color:var(--yellow)}
+footer ul{list-style:none;margin:0;padding:0;display:grid;gap:10px}
+footer a{text-decoration:none;color:#D9D6F0;transition:color .2s}
+footer a:hover{color:var(--yellow)}
+footer .est{align-self:start;background:var(--yellow);color:var(--indigo-deep);padding:24px;clip-path:polygon(12px 0,100% 0,calc(100% - 12px) 100%,0 100%)}
+footer .est b{display:block;font-size:1.05rem;margin-bottom:6px}
+footer .est a{color:var(--indigo-deep);font-stretch:75%;font-variation-settings:"wdth" 75;font-weight:850;font-size:2rem;line-height:1.1;white-space:nowrap}
+footer .est small{display:block;margin-top:6px;font-size:.88rem}
+.mark{position:relative;margin-top:60px;line-height:.78;font-stretch:62%;font-variation-settings:"wdth" 62;font-weight:900;font-size:clamp(5rem,21vw,19rem);letter-spacing:-.02em;color:transparent;-webkit-text-stroke:1.5px rgba(201,213,223,.28);white-space:nowrap;text-align:center;user-select:none}
+.mark .s{position:absolute;fill:currentColor;color:var(--yellow);width:clamp(22px,3vw,44px);height:clamp(22px,3vw,44px);animation:twinkle 3.2s ease-in-out infinite}
+footer .bottom{position:relative;z-index:1;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;padding:20px 0 26px;border-top:1px solid rgba(255,255,255,.14);font-size:.92rem;margin-top:-10px;background:var(--indigo-deep)}
+footer .bottom a{color:var(--yellow);font-weight:700}
+
+@media (max-width:980px){
+  .exp-grid,.sched-grid{grid-template-columns:1fr;gap:48px}
+  .exp-photo{max-width:520px}
+  .gallery{height:auto;flex-direction:column}
+  .pane{flex:none;height:110px}
+  .pane.on{flex:none;height:380px}
+  .pane .vt{writing-mode:horizontal-tb;transform:none;left:24px;bottom:auto;top:50%;margin-top:-.7em}
+  footer .top{grid-template-columns:1fr 1fr}
+}
+@media (max-width:760px){
+  .spaces{gap:8px}
+  .space{padding:14px 10px 12px}
+  .space svg{width:34px;height:34px;margin-bottom:8px}
+  .space b{font-size:1rem}
+  .clients ul{grid-template-columns:1fr 1fr}
+  .years{left:-8px;bottom:24px;padding:14px 16px}
+  .years svg{width:60px;height:60px}
+  .years b{font-size:2rem}
+  .day{height:140px}
+  .board{padding:22px;box-shadow:12px 12px 0 var(--mist)}
+  .badge{width:120px;height:120px;top:24px}
+  .badge .core{inset:27px}
+  .badge .core svg{width:32px;height:32px}
+  footer .top{grid-template-columns:1fr}
+  footer{padding-top:60px}
 }
 </style>
 </head>
@@ -286,7 +363,7 @@ footer .bottom a{font-weight:700;text-decoration:underline}
           <b>30+</b><span>years providing janitorial services</span>
         </div>
         <div class="tile"><img src="images/hero-cleaner.jpg" alt=""></div>
-        <div class="tile"><img src="images/hero-floor.jpg" alt=""></div>
+        <div class="tile"><img src="images/svc-strip-wax.jpg" alt="" style="object-position:40% 50%"></div>
         <div class="tile dark">
           <svg class="spark t t2" viewBox="0 0 24 24" width="40" height="40" style="top:18px;right:24px"><path d="M12 0c.8 6.4 5.6 11.2 12 12-6.4.8-11.2 5.6-12 12-.8-6.4-5.6-11.2-12-12C6.4 11.2 11.2 6.4 12 0z"/></svg>
           <svg class="spark" viewBox="0 0 24 24" width="22" height="22" style="top:60px;right:72px"><path d="M12 0c.8 6.4 5.6 11.2 12 12-6.4.8-11.2 5.6-12 12-.8-6.4-5.6-11.2-12-12C6.4 11.2 11.2 6.4 12 0z"/></svg>
@@ -310,28 +387,31 @@ footer .bottom a{font-weight:700;text-decoration:underline}
 </div>
 
 <section class="exp" aria-labelledby="exp-h">
-  <div class="wrap">
+  <div class="wrap exp-grid">
+    <figure class="exp-photo rv" style="margin:0 30px 30px 0">
+      <img src="images/hero-floor.jpg" alt="Nelson team member mopping a polished lobby floor beside the elevators" loading="lazy" width="896" height="896">
+      <div class="years rv d2" id="years">
+        <div class="ring"><svg viewBox="0 0 80 80"><circle class="trk" cx="40" cy="40" r="34"/><circle class="bar" cx="40" cy="40" r="34"/></svg><svg class="star" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0c.8 6.4 5.6 11.2 12 12-6.4.8-11.2 5.6-12 12-.8-6.4-5.6-11.2-12-12C6.4 11.2 11.2 6.4 12 0z"/></svg></div>
+        <div><b><span id="count">0</span>+</b><span>years of janitorial experience</span></div>
+      </div>
+    </figure>
     <div>
-      <h2 class="display" id="exp-h">Reliability and experience</h2>
-      <p>More than 30 years of complete cleaning services for</p>
-      <ul class="spaces">
-        <li>office,</li>
-        <li>commercial</li>
-        <li>and industrial spaces</li>
-      </ul>
-      <p>in Edmonton and surrounding communities.</p>
-    </div>
-    <div>
-      <figure><img src="images/svc-retail-floor.jpg" alt="Nelson team member mopping a commercial floor" loading="lazy"></figure>
-      <div class="board" role="group" aria-label="Our client base">
-        <div class="bhead"><h3>Our client base</h3><img src="images/logo.png" alt="" width="66" height="34"></div>
+      <h2 class="display rv" id="exp-h">Reliability and experience</h2>
+      <p class="lede rv d1">More than 30 years providing complete cleaning services in Edmonton and surrounding communities.</p>
+      <div class="spaces">
+        <div class="space rv d1"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="3" width="14" height="18"/><path d="M9 7h2M13 7h2M9 11h2M13 11h2M9 15h2M13 15h2M10 21v-3h4v3"/></svg><b>Office</b></div>
+        <div class="space rv d2"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 9l2-5h14l2 5"/><path d="M3 9c0 1.7 1.3 3 3 3s3-1.3 3-3c0 1.7 1.3 3 3 3s3-1.3 3-3c0 1.7 1.3 3 3 3s3-1.3 3-3"/><path d="M5 12v9h14v-9M10 21v-5h4v5"/></svg><b>Commercial</b></div>
+        <div class="space rv d3"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 21V11l5 3v-3l5 3v-3l5 3V4h3v17z"/><path d="M7 18h2M12 18h2M17 18h2"/></svg><b>Industrial</b></div>
+      </div>
+      <div class="clients">
+        <h3 class="rv"><svg class="star" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0c.8 6.4 5.6 11.2 12 12-6.4.8-11.2 5.6-12 12-.8-6.4-5.6-11.2-12-12C6.4 11.2 11.2 6.4 12 0z"/></svg>Our client base includes</h3>
         <ul>
-          <li>Banking industry <i aria-hidden="true">✦</i></li>
-          <li>Educational institutions <i aria-hidden="true">✦</i></li>
-          <li>Emergency services <i aria-hidden="true">✦</i></li>
-          <li>Oil business <i aria-hidden="true">✦</i></li>
-          <li>Supermarkets <i aria-hidden="true">✦</i></li>
-          <li>Transportation companies <i aria-hidden="true">✦</i></li>
+          <li class="rv d1"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 9l9-5 9 5z"/><path d="M5 9v9M9.5 9v9M14.5 9v9M19 9v9M3 21h18M3 18h18"/></svg>Banking industry</li>
+          <li class="rv d2"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2 9l10-5 10 5-10 5z"/><path d="M6 11v5c2 2 10 2 12 0v-5M22 9v6"/></svg>Educational institutions</li>
+          <li class="rv d3"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 18v-6a5 5 0 0110 0v6"/><path d="M4 21h16v-3H4zM12 3v2M4.5 6l1.5 1.5M19.5 6L18 7.5"/></svg>Emergency services</li>
+          <li class="rv d1"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3s6 7 6 11a6 6 0 01-12 0c0-4 6-11 6-11z"/><path d="M9.5 15a2.5 2.5 0 002.5 2.5"/></svg>Oil business</li>
+          <li class="rv d2"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 4h2l2.5 11h10.5l2-8H6.3"/><circle cx="9" cy="19" r="1.6"/><circle cx="17" cy="19" r="1.6"/></svg>Supermarkets</li>
+          <li class="rv d3"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2 6h12v10H2zM14 10h4l3 3v3h-7z"/><circle cx="6" cy="18" r="1.8"/><circle cx="17" cy="18" r="1.8"/></svg>Transportation companies</li>
         </ul>
       </div>
     </div>
@@ -340,51 +420,73 @@ footer .bottom a{font-weight:700;text-decoration:underline}
 
 <section class="svc" id="services" aria-labelledby="svc-h">
   <div class="wrap">
-    <div>
-      <h2 class="display" id="svc-h">What we offer</h2>
-      <p class="svc-intro">We specialize in a number of services. Choose one to see it.</p>
-      <ol id="svc-list">
-        <li class="open"><button aria-pressed="true" data-img="0"><span>Office cleaning</span><i class="tick"></i></button><img class="thumb" src="images/svc-office.jpg" alt="" loading="lazy"></li>
-        <li><button aria-pressed="false" data-img="1"><span>Retail floor maintenance</span><i class="tick"></i></button><img class="thumb" src="images/svc-retail-floor.jpg" alt="" loading="lazy"></li>
-        <li><button aria-pressed="false" data-img="2"><span>Stripping and waxing floors</span><i class="tick"></i></button><img class="thumb" src="images/svc-strip-wax.jpg" alt="" loading="lazy"></li>
-        <li><button aria-pressed="false" data-img="3"><span>Carpet cleaning</span><i class="tick"></i></button><img class="thumb" src="images/svc-carpet.jpg" alt="" loading="lazy"></li>
-        <li><button aria-pressed="false" data-img="4"><span>Post-construction cleaning</span><i class="tick"></i></button><img class="thumb" src="images/svc-post-construction.jpg" alt="" loading="lazy"></li>
-        <li><button aria-pressed="false" data-img="5"><span>Window cleaning</span><i class="tick"></i></button><img class="thumb" src="images/svc-window.jpg" alt="" loading="lazy"></li>
-        <li><button aria-pressed="false" data-img="6"><span>Pressure washing</span><i class="tick"></i></button><img class="thumb" src="images/svc-pressure.jpg" alt="" loading="lazy"></li>
-      </ol>
+    <div class="svc-top">
+      <h2 class="display rv" id="svc-h">What we offer</h2>
+      <p class="rv d1">We specialize in a number of services, from daily office cleaning to stripping and waxing floors and pressure washing.</p>
     </div>
-    <div class="panel" aria-hidden="true">
-      <div class="frame">
-        <img class="on" src="images/svc-office.jpg" alt="">
-        <img src="images/svc-retail-floor.jpg" alt="">
-        <img src="images/svc-strip-wax.jpg" alt="">
-        <img src="images/svc-carpet.jpg" alt="">
-        <img src="images/svc-post-construction.jpg" alt="">
-        <img src="images/svc-window.jpg" alt="">
-        <img src="images/svc-pressure.jpg" alt="">
-      </div>
-      <div class="cap"><span id="cap">Office cleaning</span><a href="tel:+17804615879">Free estimate</a></div>
+    <div class="gallery rv d2" id="gallery">
+      <button class="pane on" aria-pressed="true" aria-label="Office cleaning">
+        <img src="images/svc-office.jpg" alt="" loading="lazy">
+        <svg class="tag" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0c.8 6.4 5.6 11.2 12 12-6.4.8-11.2 5.6-12 12-.8-6.4-5.6-11.2-12-12C6.4 11.2 11.2 6.4 12 0z"/></svg>
+        <span class="vt" aria-hidden="true">Office cleaning</span>
+        <span class="info"><h3>Office cleaning</h3><span>Call for a free estimate</span></span>
+      </button>
+      <button class="pane" aria-pressed="false" aria-label="Retail floor maintenance">
+        <img src="images/svc-retail-floor.jpg" alt="" loading="lazy">
+        <svg class="tag" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0c.8 6.4 5.6 11.2 12 12-6.4.8-11.2 5.6-12 12-.8-6.4-5.6-11.2-12-12C6.4 11.2 11.2 6.4 12 0z"/></svg>
+        <span class="vt" aria-hidden="true">Retail floor maintenance</span>
+        <span class="info"><h3>Retail floor maintenance</h3><span>Call for a free estimate</span></span>
+      </button>
+      <button class="pane" aria-pressed="false" aria-label="Stripping and waxing floors">
+        <img src="images/svc-strip-wax.jpg" alt="" loading="lazy">
+        <svg class="tag" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0c.8 6.4 5.6 11.2 12 12-6.4.8-11.2 5.6-12 12-.8-6.4-5.6-11.2-12-12C6.4 11.2 11.2 6.4 12 0z"/></svg>
+        <span class="vt" aria-hidden="true">Stripping and waxing floors</span>
+        <span class="info"><h3>Stripping and waxing floors</h3><span>Call for a free estimate</span></span>
+      </button>
+      <button class="pane" aria-pressed="false" aria-label="Carpet cleaning">
+        <img src="images/svc-carpet.jpg" alt="" loading="lazy">
+        <svg class="tag" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0c.8 6.4 5.6 11.2 12 12-6.4.8-11.2 5.6-12 12-.8-6.4-5.6-11.2-12-12C6.4 11.2 11.2 6.4 12 0z"/></svg>
+        <span class="vt" aria-hidden="true">Carpet cleaning</span>
+        <span class="info"><h3>Carpet cleaning</h3><span>Call for a free estimate</span></span>
+      </button>
+      <button class="pane" aria-pressed="false" aria-label="Post-construction cleaning">
+        <img src="images/svc-post-construction.jpg" alt="" loading="lazy">
+        <svg class="tag" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0c.8 6.4 5.6 11.2 12 12-6.4.8-11.2 5.6-12 12-.8-6.4-5.6-11.2-12-12C6.4 11.2 11.2 6.4 12 0z"/></svg>
+        <span class="vt" aria-hidden="true">Post-construction cleaning</span>
+        <span class="info"><h3>Post-construction cleaning</h3><span>Call for a free estimate</span></span>
+      </button>
+      <button class="pane" aria-pressed="false" aria-label="Window cleaning">
+        <img src="images/svc-window.jpg" alt="" loading="lazy">
+        <svg class="tag" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0c.8 6.4 5.6 11.2 12 12-6.4.8-11.2 5.6-12 12-.8-6.4-5.6-11.2-12-12C6.4 11.2 11.2 6.4 12 0z"/></svg>
+        <span class="vt" aria-hidden="true">Window cleaning</span>
+        <span class="info"><h3>Window cleaning</h3><span>Call for a free estimate</span></span>
+      </button>
+      <button class="pane" aria-pressed="false" aria-label="Pressure washing">
+        <img src="images/svc-pressure.jpg" alt="" loading="lazy">
+        <svg class="tag" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0c.8 6.4 5.6 11.2 12 12-6.4.8-11.2 5.6-12 12-.8-6.4-5.6-11.2-12-12C6.4 11.2 11.2 6.4 12 0z"/></svg>
+        <span class="vt" aria-hidden="true">Pressure washing</span>
+        <span class="info"><h3>Pressure washing</h3><span>Call for a free estimate</span></span>
+      </button>
     </div>
   </div>
 </section>
 
 <section class="sched" aria-labelledby="sched-h">
-  <div class="wrap">
-    <div class="head">
-      <h2 class="display" id="sched-h">Flexible cleaning schedules</h2>
-      <p>Nelson Building Maintenance Inc. offers daily, three-times-per-week, two-times-per-week or weekly cleaning services.</p>
+  <div class="wrap sched-grid">
+    <div>
+      <h2 class="display rv" id="sched-h">Flexible cleaning schedules</h2>
+      <p class="lede rv d1">Nelson Building Maintenance Inc. offers daily, three-times-per-week, two-times-per-week or weekly cleaning services. Choose one to see how it looks.</p>
+      <div class="freq rv d2" id="freq">
+        <button aria-pressed="true" data-days="11111" data-label="Daily" data-sub="Cleaning every weekday"><span>Daily</span><span class="n">5×</span></button>
+        <button aria-pressed="false" data-days="10101" data-label="3 visits" data-sub="Three times per week"><span>Three times per week</span><span class="n">3×</span></button>
+        <button aria-pressed="false" data-days="01010" data-label="2 visits" data-sub="Two times per week"><span>Two times per week</span><span class="n">2×</span></button>
+        <button aria-pressed="false" data-days="00001" data-label="1 visit" data-sub="Once a week"><span>Weekly</span><span class="n">1×</span></button>
+      </div>
     </div>
-    <div class="week-scroll">
-      <table class="week">
-        <caption class="sr" style="position:absolute;left:-9999px">Cleaning schedule options by weekday</caption>
-        <thead><tr><td></td><th scope="col">Mon</th><th scope="col">Tue</th><th scope="col">Wed</th><th scope="col">Thu</th><th scope="col">Fri</th></tr></thead>
-        <tbody>
-          <tr><th scope="row">Daily</th><td class="on"></td><td class="on"></td><td class="on"></td><td class="on"></td><td class="on"></td></tr>
-          <tr><th scope="row">Three times per week</th><td class="on"></td><td></td><td class="on"></td><td></td><td class="on"></td></tr>
-          <tr><th scope="row">Two times per week</th><td></td><td class="on"></td><td></td><td class="on"></td><td></td></tr>
-          <tr><th scope="row">Weekly</th><td></td><td></td><td></td><td></td><td class="on"></td></tr>
-        </tbody>
-      </table>
+    <div class="board rv d2" id="board" aria-live="polite">
+      <div class="bh"><b id="b-label">Daily</b><span id="b-sub">Cleaning every weekday</span></div>
+      <div class="days"><div class="day on"><i></i><svg class="star" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0c.8 6.4 5.6 11.2 12 12-6.4.8-11.2 5.6-12 12-.8-6.4-5.6-11.2-12-12C6.4 11.2 11.2 6.4 12 0z"/></svg><em>Mon</em></div><div class="day on"><i></i><svg class="star" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0c.8 6.4 5.6 11.2 12 12-6.4.8-11.2 5.6-12 12-.8-6.4-5.6-11.2-12-12C6.4 11.2 11.2 6.4 12 0z"/></svg><em>Tue</em></div><div class="day on"><i></i><svg class="star" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0c.8 6.4 5.6 11.2 12 12-6.4.8-11.2 5.6-12 12-.8-6.4-5.6-11.2-12-12C6.4 11.2 11.2 6.4 12 0z"/></svg><em>Wed</em></div><div class="day on"><i></i><svg class="star" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0c.8 6.4 5.6 11.2 12 12-6.4.8-11.2 5.6-12 12-.8-6.4-5.6-11.2-12-12C6.4 11.2 11.2 6.4 12 0z"/></svg><em>Thu</em></div><div class="day on"><i></i><svg class="star" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0c.8 6.4 5.6 11.2 12 12-6.4.8-11.2 5.6-12 12-.8-6.4-5.6-11.2-12-12C6.4 11.2 11.2 6.4 12 0z"/></svg><em>Fri</em></div></div>
+      <div class="squeegee"></div>
     </div>
   </div>
 </section>
@@ -410,11 +512,14 @@ footer .bottom a{font-weight:700;text-decoration:underline}
 </section>
 
 <section class="sky" aria-labelledby="sky-h">
-  <img src="images/edmonton-skyline.jpg" alt="Edmonton skyline">
+  <img src="images/edmonton-skyline.jpg" alt="Edmonton skyline above the North Saskatchewan River valley" id="sky-img" loading="lazy">
+  <div class="badge" aria-hidden="true">
+    <svg class="spin" viewBox="0 0 170 170"><defs><path id="circ" d="M85,85 m-70,0 a70,70 0 1,1 140,0 a70,70 0 1,1 -140,0"/></defs><text><textPath href="#circ">QUALITY AND SATISFACTION GUARANTEED ✦ NELSON BUILDING MAINTENANCE ✦ </textPath></text></svg>
+    <div class="core"><svg viewBox="0 0 24 24" class="star"><path d="M12 0c.8 6.4 5.6 11.2 12 12-6.4.8-11.2 5.6-12 12-.8-6.4-5.6-11.2-12-12C6.4 11.2 11.2 6.4 12 0z"/></svg></div>
+  </div>
   <div class="wrap">
-    <h2 class="display" id="sky-h">Edmonton and surrounding communities</h2>
-    <p>A local team keeping banks, schools, emergency services, supermarkets and industrial sites clean for over 30 years.</p>
-    <span class="stamp">Quality and satisfaction guaranteed</span>
+    <h2 class="word rv" id="sky-h">Edmonton<span>and surrounding communities</span></h2>
+    <p class="rv d1">A local team keeping banks, schools, emergency services, supermarkets and industrial sites clean for over 30 years. Quality and satisfaction guaranteed.</p>
   </div>
 </section>
 
@@ -444,11 +549,11 @@ footer .bottom a{font-weight:700;text-decoration:underline}
   <div class="wrap">
     <div class="top">
       <div>
-        <span class="logo-plate"><img src="images/logo.png" alt="Nelson Building Maintenance Inc." width="135" height="70"></span>
-        <p style="margin:0;max-width:40ch">Complete cleaning services for office, commercial and industrial spaces in Edmonton and surrounding communities.</p>
+        <span class="logo-plate"><img src="images/logo.png" alt="Nelson Building Maintenance Inc." width="142" height="74"></span>
+        <p>Complete cleaning services for office, commercial and industrial spaces in Edmonton and surrounding communities. Fully bonded, insured and covered by WCB.</p>
       </div>
       <div>
-        <h4>Pages</h4>
+        <h4><svg class="star" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0c.8 6.4 5.6 11.2 12 12-6.4.8-11.2 5.6-12 12-.8-6.4-5.6-11.2-12-12C6.4 11.2 11.2 6.4 12 0z"/></svg>Pages</h4>
         <ul>
           <li><a href="index.html">Home Page</a></li>
           <li><a href="https://nelsonbm.com/about.html">About Us</a></li>
@@ -457,14 +562,23 @@ footer .bottom a{font-weight:700;text-decoration:underline}
         </ul>
       </div>
       <div>
-        <h4>Contact</h4>
+        <h4><svg class="star" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0c.8 6.4 5.6 11.2 12 12-6.4.8-11.2 5.6-12 12-.8-6.4-5.6-11.2-12-12C6.4 11.2 11.2 6.4 12 0z"/></svg>Contact</h4>
         <ul>
-          <li><a href="tel:+17804615879">780-461-5879</a></li>
-          <li>Fax 780-461-3518</li>
           <li><a href="mailto:info@nelsonbm.com">info@nelsonbm.com</a></li>
-          <li>6047 88 St NW, Edmonton, AB T6E 5T4</li>
+          <li>Fax 780-461-3518</li>
+          <li>6047 88 St NW, Edmonton, AB T6E 5T4, Canada</li>
         </ul>
       </div>
+      <div class="est">
+        <b>Free estimate</b>
+        <a href="tel:+17804615879">780-461-5879</a>
+        <small>We can provide an approximate quote over the phone.</small>
+      </div>
+    </div>
+    <div class="mark" aria-hidden="true">Nelson
+      <svg class="s" viewBox="0 0 24 24" style="top:12%;left:9%"><path d="M12 0c.8 6.4 5.6 11.2 12 12-6.4.8-11.2 5.6-12 12-.8-6.4-5.6-11.2-12-12C6.4 11.2 11.2 6.4 12 0z"/></svg>
+      <svg class="s" viewBox="0 0 24 24" style="top:38%;right:11%;animation-delay:1.2s"><path d="M12 0c.8 6.4 5.6 11.2 12 12-6.4.8-11.2 5.6-12 12-.8-6.4-5.6-11.2-12-12C6.4 11.2 11.2 6.4 12 0z"/></svg>
+      <svg class="s" viewBox="0 0 24 24" style="top:4%;right:30%;animation-delay:2.1s;width:18px;height:18px"><path d="M12 0c.8 6.4 5.6 11.2 12 12-6.4.8-11.2 5.6-12 12-.8-6.4-5.6-11.2-12-12C6.4 11.2 11.2 6.4 12 0z"/></svg>
     </div>
     <div class="bottom">
       <span>© 2026 Nelson Building Maintenance Inc.</span>
@@ -479,17 +593,44 @@ footer .bottom a{font-weight:700;text-decoration:underline}
 (function(){
   var btn=document.querySelector('.menu-btn'),nav=document.getElementById('nav');
   btn.addEventListener('click',function(){var o=nav.classList.toggle('open');btn.setAttribute('aria-expanded',o)});
-  var list=document.getElementById('svc-list'),imgs=document.querySelectorAll('.panel .frame img'),cap=document.getElementById('cap');
-  function pick(b){
-    list.querySelectorAll('button').forEach(function(x){x.setAttribute('aria-pressed','false');x.parentNode.classList.remove('open')});
-    b.setAttribute('aria-pressed','true');b.parentNode.classList.add('open');
-    imgs.forEach(function(i,n){i.classList.toggle('on',n==b.dataset.img)});
-    cap.textContent=b.querySelector('span').textContent;
-  }
-  list.querySelectorAll('button').forEach(function(b){
-    b.addEventListener('click',function(){pick(b)});
-    b.addEventListener('mouseenter',function(){if(matchMedia('(hover:hover)').matches)pick(b)});
+  var reduce=matchMedia('(prefers-reduced-motion:reduce)').matches;
+
+  // reveal on scroll
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);
+    if(e.target.id==='years')count();}})},{threshold:.18});
+  document.querySelectorAll('.rv').forEach(function(el){io.observe(el)});
+
+  function count(){var el=document.getElementById('count'),t0=null,end=30;
+    if(reduce){el.textContent=end;return}
+    function f(t){if(!t0)t0=t;var p=Math.min((t-t0)/1600,1);el.textContent=Math.round(end*(1-Math.pow(1-p,3)));if(p<1)requestAnimationFrame(f)}requestAnimationFrame(f)}
+
+  // services gallery
+  var panes=document.querySelectorAll('.pane');
+  function openPane(p){panes.forEach(function(x){x.classList.toggle('on',x===p);x.setAttribute('aria-pressed',x===p)})}
+  panes.forEach(function(p){
+    p.addEventListener('click',function(){openPane(p)});
+    p.addEventListener('mouseenter',function(){if(matchMedia('(hover:hover) and (min-width:981px)').matches)openPane(p)});
+    p.addEventListener('focus',function(){openPane(p)});
   });
+
+  // schedule board
+  var board=document.getElementById('board'),days=board.querySelectorAll('.day');
+  document.querySelectorAll('#freq button').forEach(function(b){
+    b.addEventListener('click',function(){
+      document.querySelectorAll('#freq button').forEach(function(x){x.setAttribute('aria-pressed',x===b)});
+      board.classList.remove('sweep');void board.offsetWidth;board.classList.add('sweep');
+      b.dataset.days.split('').forEach(function(v,i){days[i].classList.toggle('on',v==='1')});
+      document.getElementById('b-label').textContent=b.dataset.label;
+      document.getElementById('b-sub').textContent=b.dataset.sub;
+    });
+  });
+
+  // skyline parallax
+  var sky=document.getElementById('sky-img');
+  if(!reduce&&sky){var sec=sky.parentNode,tick=false;
+    addEventListener('scroll',function(){if(tick)return;tick=true;requestAnimationFrame(function(){
+      var r=sec.getBoundingClientRect(),vh=innerHeight;
+      if(r.bottom>0&&r.top<vh){var p=(vh-r.top)/(vh+r.height);sky.style.transform='translateY('+(-p*15)+'%)'}tick=false})},{passive:true});}
 })();
 </script>
 </body>
